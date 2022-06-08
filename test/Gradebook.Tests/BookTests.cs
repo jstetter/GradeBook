@@ -7,7 +7,7 @@ namespace Gradebook.Tests;
 public class BookTests
 {
     [Fact]
-    public void Test1()
+    public void BookCalculatesAnAverageGrade()
     {
         //arrange
         var book = new Book("");
@@ -33,5 +33,6 @@ public class BookTests
 
     sample command: dotnet add reference ../../src/GradeBook/GradeBook.csproj
 
+    to test using CLI run dotnet test on the terminal
 
 */

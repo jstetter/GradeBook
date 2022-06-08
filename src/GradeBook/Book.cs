@@ -5,7 +5,7 @@ namespace GradeBook{
         //Constructor method (needs to have the same name as the class)
         public Book(string name){
             grades = new List<double>();
-            this.name = name;
+            this.Name = name;
         }
 
         //methods
@@ -60,7 +60,7 @@ namespace GradeBook{
         //FIELDS
         //initialize a grades field, the field is a List data structure
         private List<double> grades;
-        private string name;
+        public string Name;
 
     }
 }
