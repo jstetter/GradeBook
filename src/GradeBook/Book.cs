@@ -16,7 +16,7 @@ namespace GradeBook{
             }
             else{
                 //Console.WriteLine("Invalid value");
-                //throw exceptioni
+                //throw exception
                 throw new ArgumentException($"Invalid {nameof(grade)}");
             }
             
@@ -124,7 +124,37 @@ namespace GradeBook{
         //FIELDS
         //initialize a grades field, the field is a List data structure
         private List<double> grades;
-        public string Name;
 
+        //decalaring a property the long way
+        /*
+        public string Name{
+            get{
+                return name;
+            }
+            set{
+                if(!String.IsNullOrEmpty(value)){
+                    name = value;
+                }
+            }
+        }
+        */
+        
+        //shorthand way to declare a property
+        public string Name{
+            get; 
+            set;
+        }
+
+        //there are some places in other parts of the dotnet framework where fields and properties
+        //behave differently even though there's little to no different here
+
+        //this is the name field
+        private string name;
+
+        //read-only field
+        readonly string category = "Science";
+        //const fields, these are static members and accessed using the class not the object (i.e. Book.CATEGORY)
+        public const string CATEGORY = "Science";
+        
     }
 }
