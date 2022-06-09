@@ -15,7 +15,9 @@ namespace GradeBook{
                 grades.Add(grade);
             }
             else{
-                Console.WriteLine("Invalid value");
+                //Console.WriteLine("Invalid value");
+                //throw exceptioni
+                throw new ArgumentException($"Invalid {nameof(grade)}");
             }
             
         }
@@ -78,10 +80,10 @@ namespace GradeBook{
             do{
                 //break; breaks you out of the whole loop next line is 92
                 //continue; skips rest of loop and continues iteration
-
                 result.Low = Math.Min(grades[index], result.Low);
                 result.High = Math.Max(grades[index], result.High);
                 result.Average += grades[index];
+                index++;
             }while(index < grades.Count);
 
             //while loop
